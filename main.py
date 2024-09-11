@@ -2,6 +2,8 @@ from tkinter import *
 
 BACKGROUND_COLOR = "#B1DDC6"
 
+
+
 window = Tk()
 window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
 window.title('Flash Cards')
@@ -14,21 +16,12 @@ canvas.create_text(400, 150, text="Language", font=('Ariel', 40, 'italic'))
 canvas.create_text(400, 263, text="word", font=('Ariel', 60, 'bold'))
 canvas.grid(column=0, columnspan=2, row=0)
 
-# wrong_canvas = Canvas(window, width=99, height=99, highlightthickness=0)
-# wrong_canvas.create_image(49, 49, image=wrong_img)
-# wrong_canvas.grid(column=0, row=1)
-
 unknown_img = PhotoImage(file='images/wrong.png')
 unknown_button = Button(image=unknown_img, borderwidth=0, relief='flat', bg=BACKGROUND_COLOR)
 unknown_button.grid(column=0, row=1)
 known_img = PhotoImage(file='images/right.png')
 known_button = Button(image=known_img, borderwidth=0, relief='flat', bg=BACKGROUND_COLOR)
 known_button.grid(column=1, row=1)
-
-
-
-
-
 
 
 window.mainloop()
